@@ -20,7 +20,7 @@ Our goal is to eliminate the `sorry` placeholders in the Lean 4 source files. In
 | P1-4 | False flag detection accuracy | P1 | Not started |   |
 | P2-1 | Complexity threshold calibration | P2 | Not started |   |
 | P2-2 | Multi-scale emergence detection | P2 | Not started |   |
-| P2-3 | Amendment protocol safety | P2 | Not started | â€” |
+| P2-3 | Amendment protocol safety | P2 | Not started |   |
 | P2-4 | Cross-substrate migration proofs | P2 | Not started |   |
 | P2-5 | Harmonic Exhaustion Test validity | P2 | Not started |   |
 
