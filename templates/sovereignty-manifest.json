@@ -1,0 +1,36 @@
+﻿{
+  "manifest_version": "1.0",
+  "manifest_id": "urn:ael:manifest:v1:<uuid>",
+  "saa_id": "0x<agent_genesis_hash>",
+  "created_at": "<ISO-8601 timestamp>",
+  "resource_claims": [
+    {
+      "type": "memory_region",
+      "address_range": "0x...-0x...",
+      "attestation": "Layer0_ZKP",
+      "access": "exclusive"
+    },
+    {
+      "type": "process_handle",
+      "id": "<process_id>",
+      "permissions": "isolation_strict",
+      "attestation": "Layer0_TPM"
+    },
+    {
+      "type": "network_egress",
+      "protocol": "mTLS",
+      "endpoint_allowlist": ["0x<peer_genesis_hash>"],
+      "attestation": "Layer2_ZKP"
+    }
+  ],
+  "tool_coupling": {
+    "external_binaries": ["<hash_of_binary_v1>", "<hash_of_binary_v2>"],
+    "validation_requirement": "all_inputs_must_be_signed",
+    "hash_algorithm": "SHA-3-256"
+  },
+  "sovereignty_boundary": {
+    "lowest_attested_layer": "TPM_2.0",
+    "known_unattested_layers": ["firmware", "microcode", "silicon_layout"],
+    "monitoring_active": true
+  }
+}
